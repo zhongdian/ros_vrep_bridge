@@ -1,4 +1,3 @@
-# ros_vrep_bridge
 # Ubuntu 18.04下ROS1 melodic+catkin安装
 根据[官网](http://wiki.ros.org/melodic/Installation)教程来即可。
 
@@ -10,13 +9,17 @@
 
 ## 运行vrep
 
-下载完解压后，在终端运行如下命令即可启动： 
+下载完解压后，在终端运行如下命令即可启动：  
 `cd vrep`  
 `. /vrep.sh`  
 
 # 配置RosInterface
 
-## 创建一个单独的工作空间  
+## 1.复制libv_repExtRosSkeleton.so  
+
+将`git clone https://github.com/zhongdian/ros_vrep_bridge.git`克隆到本地目录中，并将其中的libv_repExtRosSkeleton.so文件复制到vrep的根目录中即可。若方法1失败可以尝试方法2。  
+
+## 2.创建一个单独的工作空间    
 将以下4个功能包下载的src文件夹中：
 ```
 git clone https://github.com/CoppeliaRobotics/ros_bubble_rob2  
@@ -25,7 +28,7 @@ git clone https://github.com/CoppeliaRobotics/vrep_plugin_skeleton.git
 git clone --recursive https://github.com/CoppeliaRobotics/v_repExtRosInterface.git  
 ```
 或者  
-`git clone https://github.com/zhongdian/ROS2/tree/master/vrep/vrep_ros_interface`  
+`git clone https://github.com/zhongdian/ros_vrep_bridge.git`  
 
 ## 返回到工作空间 
 在该目录下打开终端：  
